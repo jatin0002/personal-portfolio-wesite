@@ -40,7 +40,7 @@ const SmallFeaturedProject = ({ data, custom, animate, length }) => {
         className="rounded p-1 group bg-LightNavy transform hover:-translate-y-1.5 duration-200 ease-in"
         style={{
           minHeight: smScreen ? 300 : smallScreen ? 300 : 340,
-          width: smScreen ? 300 : smallScreen ? 270 : 340,
+          width: smScreen ? 280 : smallScreen ? 270 : 340,
         }}
       >
         <div className="flex justify-between p-5 small:p-3">

@@ -67,7 +67,7 @@ export default function ContactMeScreen() {
         <div
           className="flex justify-center items-center transform bottom-0 absolute ssm:mt-5"
           style={{
-            width: smScreen ? "300px" : "90%",
+            width: smScreen ? "280px" : "90%",
             bottom: smScreen ? 30 : 10,
           }}
         >
