@@ -40,7 +40,7 @@ export default function ProjectsScreen({ data }) {
 
   return (
     <div>
-      <div className="p-16 pt-28 ssm:p-5" id="projects">
+      <div className="p-16 ssm:pl-0 pt-28 ssm:p-5" id="projects">
         <HeadingComponent heading="Some Things I’ve Built" width="25%" />
         <div ref={ref}>
           {highEndProject.map((project, i) => (

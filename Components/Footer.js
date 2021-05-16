@@ -1,8 +1,11 @@
 const Footer = () => {
   return (
-    <div className="flex  w-full mb-5 cursor-pointer  absolute bottom-0 left-1/2  ssm:w-40 ">
-      <p className="text-Slate hover:text-Green transform -translate-x-1/2 ">
-        Designed & Built By Jatin Pratap Singh
+    <div className="flex flex-col group cursor-pointer">
+      <p className="text-Slate group-hover:text-Green text-center ">
+        Designed & Built By
+      </p>
+      <p className="text-Slate group-hover:text-Green text-center">
+        Jatin Pratap Singh
       </p>
     </div>
   );

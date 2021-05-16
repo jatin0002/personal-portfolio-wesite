@@ -134,7 +134,7 @@ const AllFilteredProjects = ({ data }) => {
       <div className="flex justify-center ">
         <div
           ref={ref}
-          className=" grid grid-cols-3 gap-5 ssm:justify-center ssm:grid-cols-1 ssm:gap-2 small:grid-cols-2"
+          className=" grid grid-cols-3 gap-5 ssm:justify-center ssm:grid-cols-1 ssm:gap-4 small:grid-cols-2"
         >
           {allProject <= 0 ? (
             <div className="flex  w-screen justify-center  p-2 ">

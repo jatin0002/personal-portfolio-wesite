@@ -48,7 +48,7 @@ const SocialIcons = () => {
 
       <Link href="https://www.instagram.com/jatin_singh20">
         <a target="_blank">
-          <div className="text-Green h-7 w-7 cursor-pointer scale-125 transform hover:scale-150 transition 300s ease-in">
+          <div className="text-Green h-8 w-8 cursor-pointer scale-125 transform hover:scale-150 transition 300s ease-in">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"

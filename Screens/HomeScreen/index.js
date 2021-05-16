@@ -1,6 +1,29 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import useWindowDimensions from "../../helper";
 export default function HomeScreen() {
+  const [smScreen, setSmScreen] = useState(false);
+  let w, h;
+  if (typeof window !== "undefined") {
+    const { width, height } = useWindowDimensions();
+    w = width;
+    h = height;
+  }
+  useEffect(() => {
+    if (w >= 320 && w < 639) {
+      setSmScreen(true);
+    } else if (w >= 640 && w < 767) {
+      setSmScreen(false);
+    } else if (w >= 768 && w < 1023) {
+      setSmScreen(false);
+    } else if (w >= 1024 && w < 1279) {
+      setSmScreen(false);
+    } else if (w >= 1280 && w < 1535) {
+      setSmScreen(false);
+    }
+  }, [w]);
+
   const container = {
     hidden: { opacity: 0, y: 10 },
     show: {
@@ -45,15 +68,16 @@ export default function HomeScreen() {
           Jatin
         </motion.p>
         <motion.p
-          className="text-Green text-7xl  font-semibold ssm:text-4xl ssm:w-80 small:text-5xl "
+          className="text-Green text-7xl  font-semibold ssm:text-4xl  small:text-5xl "
           variants={item}
           initial="hidden"
           animate="show"
+          style={{ width: smScreen ? "18rem" : "100%" }}
         >
           Pratap Singh.
         </motion.p>
         <motion.p
-          className="text-Slate text-2xl my-7 tracking-wide font-semibold ssm:text-lg ssm:my-5  small:text-xl "
+          className="text-Slate text-2xl my-7 tracking-wide font-semibold ssm:text-lg ssm:my-5  small:text-xl  "
           variants={item}
           initial="hidden"
           animate="show"
@@ -61,10 +85,11 @@ export default function HomeScreen() {
           Fullstack Web Developement And Mobile Developement.
         </motion.p>
         <motion.p
-          className="text-white text-xl my-6 font-regular w-1/2  ssm:text-base ssm:my-5 ssm:w-80 small:text-base small:w-3/4 "
+          className="text-white text-xl my-6 font-regular w-1/2  ssm:text-base ssm:my-5  small:text-base small:w-3/4 "
           variants={item}
           initial="hidden"
           animate="show"
+          style={{ width: smScreen ? "18rem" : "100%" }}
         >
           I am a full stack web developer and a mobile application developer. I
           like to develop websites and mobile apps for human beings to make
